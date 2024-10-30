@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="40sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Control"
+            android:textSize="30sp"
+            android:id="@+id/txttitle"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID"
+            android:id="@+id/fieldid"
+            android:layout_below="@+id/txttitle"
+            android:inputType="number"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:id="@+id/name"
+            android:layout_below="@+id/fieldid"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:id="@+id/phone"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="10dp"
+            android:inputType="number"/>/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Surname"
+            android:id="@+id/first_surname"
+            android:layout_below="@+id/phone"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:id="@+id/age"
+            android:inputType="number"
+            android:layout_below="@+id/first_surname"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:id="@+id/gender"
+            android:layout_below="@+id/age"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth (dd/mm/yyyy)"
+            android:id="@+id/birthdate"
+            android:layout_below="@+id/gender"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Height (cm)"
+            android:id="@+id/height"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/birthdate"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/height"
+            android:id="@+id/group1"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Insert 1"
+                android:id="@+id/insert1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Insert 2"
+                android:id="@+id/insert2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group1"
+            android:id="@+id/group2"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Search 1"
+                android:id="@+id/search1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Search 2"
+                android:id="@+id/search2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view"
+            android:layout_below="@+id/group3"
+            android:text="View Users"/>
+
+        <!-- New Button for Sorted List View -->
+        <Button
+            android:id="@+id/btn_view_sorted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View List Sorted by Name"
+            android:layout_below="@id/view" />
+
+        <Button
+            android:id="@+id/btn_search_first_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search by First Surname"
+            android:layout_below="@id/btn_view_sorted"/>
+
+        <Button
+            android:id="@+id/btn_search_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search by Age"
+            android:layout_below="@id/btn_search_first_surname"/>
+
+        <Button
+            android:id="@+id/btn_search_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search by Height"
+            android:layout_below="@id/btn_search_age"/>
+
+    </RelativeLayout>
+</ScrollView>
